@@ -48,14 +48,48 @@ FLAGS
 
 上記と同じ内容は、`python editpdf.py cat --help`を実行することで確認できます。
 
-例: `doc1.pdf`と`doc2.pdf`を結合する。
+例1: `doc1.pdf`と`doc2.pdf`を結合する。
 ```
 python editpdf.py cat doc1.pdf doc2.pdf
 ```
 `editpdf.py`と同じディレクトリに今日の日付で`yyyy-mm-dd_output.pdf`が作成されます。拡張子`.pdf`は省略することもできます。
 
-例: `doc1.pdf`の1ページ目を取り出す。
+例2: `doc1.pdf`の1ページ目を取り出す。
 ```
 python editpdf.py cat doc1[0]
 ```
 ファイル名を引数にとるとき、Pythonと同様のスライス構文が使用できます (注: **0始まりとなります**)。
+
+### bm - ブックマークの追加
+```
+NAME
+    editpdf.py bm - PDFファイルにブックマークを追加
+
+SYNOPSIS
+    editpdf.py bm INFILE TITLE PAGENUM <flags>
+
+DESCRIPTION
+    PDFファイルにブックマークを追加
+
+POSITIONAL ARGUMENTS
+    INFILE
+        Type: str
+    TITLE
+        Type: str
+        ブックマークのタイトル
+    PAGENUM
+        Type: int
+        ブックマークを追加するページ番号
+
+FLAGS
+    --outfile=OUTFILE
+        Type: str
+        Default: '2023-09-22_output.pdf'
+    --overwrite=OVERWRITE
+        Default: False
+        Trueの場合、元のファイルへの上書きを許可する. Defaults to False.
+
+NOTES
+    You can also use flags syntax for POSITIONAL ARGUMENTS
+```
+上記と同じ内容は、`python editpdf.py bm --help`を実行することで確認できます。
