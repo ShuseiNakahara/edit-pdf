@@ -1,0 +1,2 @@
+# edit-pdf
+PyPDF2とfireを利用したPython製のPDF編集コマンドラインアプリケーション
